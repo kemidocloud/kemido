@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>kemido-oauth2</artifactId>
+        <groupId>com.kemido</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>kemido-oauth2-core</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <description>Kemido Framework 基础核心组件模块</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-web-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-data-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-cas</artifactId>
+        </dependency>
+
+        <!-- 这个不要删，用于统一覆盖依赖于 spring-security-web 的包-->
+        <!-- 以实现用自定义代码覆盖原有 Spring Security Web 代码的-->
+        <!-- 单独增加一个依赖，相当于把其它包自己依赖的 Spring Security Web 提取出来，再用自己的代码覆盖-->
+        <!-- 这是一个相当骚的操作-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-resource-server</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

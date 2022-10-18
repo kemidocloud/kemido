@@ -1,0 +1,3 @@
+com.kemido.facility.autoconfigure.AutoConfiguration
+com.kemido.facility.sentinel.autoconfigure.FacilitySentinelAutoConfiguration
+com.kemido.facility.log.autoconfigure.FacilityLogAutoConfiguration

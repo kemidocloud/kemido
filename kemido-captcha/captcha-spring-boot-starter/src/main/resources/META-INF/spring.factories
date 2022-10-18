@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.kemido.captcha.autoconfigure.AutoConfiguration,\
+  com.kemido.captcha.behavior.configuration.BehaviorCaptchaConfiguration,\
+  com.kemido.captcha.graphic.configuration.GraphicCaptchaConfiguration,\
+  com.kemido.captcha.hutool.configuration.HutoolCaptchaConfiguration

@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kemido-data</artifactId>
+        <groupId>com.kemido</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>kemido-data-spring-boot-starter</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <description>Kemido Framework 基础核心组件模块</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-data-sdk-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-data-sdk-mybatis-plus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-data-sdk-p6spy</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

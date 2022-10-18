@@ -1,0 +1,2 @@
+com.kemido.data.autoconfigure.AutoConfiguration
+com.kemido.data.jpa.configuration.DataJpaConfiguration

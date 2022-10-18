@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>kemido-cache</artifactId>
+        <groupId>com.kemido</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>kemido-cache-sdk-jetcache</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <description>Kemido Framework JetCache 组件相关代码模块</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-assistant-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-cache-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-cache-sdk-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-cache-sdk-caffeine</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alicp.jetcache</groupId>
+            <artifactId>jetcache-starter-redis-lettuce</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>kryo</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>

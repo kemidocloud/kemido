@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>kemido</artifactId>
+        <groupId>com.kemido</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>kemido-sms</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>sms-core</module>
+        <module>sms-sdk-aliyun</module>
+        <module>sms-sdk-chinamobile</module>
+        <module>sms-sdk-huawei</module>
+        <module>sms-sdk-jd</module>
+        <module>sms-sdk-netease</module>
+        <module>sms-sdk-qiniu</module>
+        <module>sms-sdk-tencent</module>
+        <module>sms-sdk-upyun</module>
+        <module>sms-sdk-yunpian</module>
+        <module>sms-sdk-all</module>
+        <module>sms-spring-boot-starter</module>
+    </modules>
+
+</project>

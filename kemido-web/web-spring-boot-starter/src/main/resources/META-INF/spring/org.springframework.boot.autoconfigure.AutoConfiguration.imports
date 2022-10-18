@@ -1,0 +1,7 @@
+com.kemido.web.autoconfigure.AutoConfiguration
+com.kemido.web.rest.autoconfigure.WebRestAutoConfiguration
+com.kemido.web.rest.autoconfigure.FeignAutoConfiguration
+com.kemido.web.rest.autoconfigure.OkHttpAutoConfiguration
+com.kemido.web.rest.autoconfigure.HttpClientAutoConfiguration
+com.kemido.web.rest.autoconfigure.RestTemplateAutoConfiguration
+com.kemido.web.scan.configuration.ScanConfiguration

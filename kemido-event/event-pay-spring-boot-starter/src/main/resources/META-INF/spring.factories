@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.kemido.event.pay.autoconfigure.AutoConfiguration

@@ -1,0 +1,2 @@
+com.kemido.assistant.autoconfigure.AutoConfiguration
+com.kemido.assistant.autoconfigure.JacksonConfiguration

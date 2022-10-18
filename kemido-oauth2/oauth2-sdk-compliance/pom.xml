@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>kemido-oauth2</artifactId>
+        <groupId>com.kemido</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <description>Kemido Framework  应用安全合规支持模块组件</description>
+
+    <artifactId>kemido-oauth2-sdk-compliance</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-oauth2-sdk-authorization-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kemido</groupId>
+            <artifactId>kemido-event-security-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

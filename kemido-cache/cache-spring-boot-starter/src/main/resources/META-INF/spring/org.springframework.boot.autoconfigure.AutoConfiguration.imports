@@ -1,0 +1,3 @@
+com.kemido.cache.autoconfigure.AutoConfiguration
+com.kemido.cache.jetcache.configuration.JetCacheConfiguration
+com.kemido.cache.redisson.configuration.RedissonConfiguration

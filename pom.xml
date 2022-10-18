@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.kemido</groupId>
+        <artifactId>kemido-dependencies</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>kemido-dependencies/pom.xml</relativePath>
+    </parent>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>zoujiaqing</name>
+            <email>zoujiaqing@gmail.com</email>
+            <organization>https://www.kemido.com</organization>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git@github.com:kemidocloud/kemido.git</connection>
+        <developerConnection>scm:git@github.com:kemidocloud/kemido.git</developerConnection>
+        <url>git@github.com:kemidocloud/kemido.git</url>
+    </scm>
+
+    <artifactId>kemido</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <description>Kemido Framework</description>
+
+    <profiles>
+        <profile>
+            <id>develop</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>sonatype-nexus-snapshots</id>
+                    <name>Sonatype Nexus Snapshots</name>
+                    <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
+                <repository>
+                    <id>sonatype-nexus-release</id>
+                    <name>Nexus Release Repository</name>
+                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
+    <modules>
+        <module>kemido-dependencies</module>
+        <module>kemido-assistant</module>
+        <module>kemido-cache</module>
+        <module>kemido-data</module>
+        <module>kemido-web</module>
+        <module>kemido-rest</module>
+        <module>kemido-captcha</module>
+        <module>kemido-oss</module>
+        <module>kemido-pay</module>
+        <module>kemido-websocket</module>
+        <module>kemido-message</module>
+        <module>kemido-event</module>
+        <module>kemido-facility</module>
+        <module>kemido-oauth2</module>
+        <module>kemido-protect</module>
+        <module>kemido-access</module>
+        <module>kemido-sms</module>
+        <module>kemido-nosql</module>
+    </modules>
+
+</project>
