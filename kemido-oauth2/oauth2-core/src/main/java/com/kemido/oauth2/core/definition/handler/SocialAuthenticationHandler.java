@@ -1,4 +1,4 @@
-package com.kemido.oauth2.authorization.definition;
+package com.kemido.oauth2.core.definition.handler;
 
 import com.kemido.assistant.core.domain.AccessPrincipal;
 import com.kemido.oauth2.core.definition.domain.KemidoUser;
