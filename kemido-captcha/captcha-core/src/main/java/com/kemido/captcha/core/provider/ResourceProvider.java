@@ -8,6 +8,7 @@ import cn.hutool.core.codec.Base64;
 import cn.hutool.core.img.FontUtil;
 import cn.hutool.core.img.ImgUtil;
 import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.io.IORuntimeException;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.system.SystemUtil;
 import org.apache.commons.collections4.MapUtils;
@@ -27,10 +28,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 
 /**
  * <p>Description: 验证码静态资源加载器 </p>
@@ -41,6 +40,7 @@ public class ResourceProvider implements InitializingBean {
     private static final Logger log = LoggerFactory.getLogger(ResourceProvider.class);
 
     private static final String FONT_RESOURCE = "classpath*:/fonts/*.ttf";
+    private static final String FONT_FOLDER = "/usr/share/fonts/kemido/";
 
     private final Map<String, String[]> imageIndexes = new ConcurrentHashMap<>();
     private final Map<String, String> jigsawOriginalImages = new ConcurrentHashMap<>();
@@ -123,10 +123,39 @@ public class ResourceProvider implements InitializingBean {
     private static Font getFont(Resource resource) {
         try {
             return FontUtil.createFont(resource.getInputStream());
+        } catch (IORuntimeException e) {
+            // 虽然 java.awt.Font 抛出的是 IOException, 因为使用 Hutool FontUtil 将错误又包装了一次。所以出错时必须要拦截 IORuntimeException，否则会导致错误不被拦截直接抛出，应用启动失败。
+            log.warn("[Kemido] |- Can not read font in the resources folder, maybe in docker.");
+            // TODO: 2022-10-21 尝试在 docker alpine 下解决字体问题的多种方式之一。目前改用 debian，下面代码已经不再需要。暂留，确保确实没有问题后再做处理
+            Font fontInfileSystem = getFontUnderDocker(resource.getFilename());
+            if (ObjectUtils.isNotEmpty(fontInfileSystem)) {
+                return fontInfileSystem;
+            }
         } catch (IOException e) {
-            log.error("[Kemido] |- Read font catch io error!", e);
+            log.error("[Kemido] |- Resource object in resources folder catch io error!", e);
         }
 
+        return null;
+    }
+
+    private static Font getFontUnderDocker(String filename) {
+        if (SystemUtil.getOsInfo().isLinux()) {
+            String path = FONT_FOLDER + filename;
+
+            File file = new File(path);
+            if (ObjectUtils.isNotEmpty(file) && FileUtil.exist(file)) {
+                System.out.println(file.getAbsolutePath());
+                try {
+                    Font font = FontUtil.createFont(file);
+                    log.debug("[Kemido] |- Read font [{}] under the DOCKER.", font.getFontName());
+                    return font;
+                } catch (IORuntimeException e) {
+                    log.error("[Kemido] |- Read font under the DOCKER catch error.");
+                } catch (NullPointerException e) {
+                    log.error("[Kemido] |- Read font under the DOCKER catch null error.");
+                }
+            }
+        }
         return null;
     }
 
@@ -159,26 +188,11 @@ public class ResourceProvider implements InitializingBean {
         }
     }
 
-    private Map<String, Font> getFontsUnderLinux() {
-        String directory = "/usr/share/fonts";
-        boolean includeRequired = FileUtil.exist("/usr/share/fonts", "WenQuanZhengHei.ttf");
-        if (includeRequired) {
-            File[] fonts = FileUtil.ls(directory);
-            if (ArrayUtils.isNotEmpty(fonts)) {
-                Map<String, Font> result = Arrays.stream(fonts).collect(Collectors.toMap(File::getName, FontUtil::createFont));
-                log.debug("[Kemido] |- Load [{}] fonts under linux or docker.", result.size());
-                return result;
-            }
-        }
-
-        return new HashMap<>();
-    }
-
     private Font getDefaultFont(String fontName, int fontSize, FontStyle fontStyle) {
         if (StringUtils.isNotBlank(fontName)) {
             return new Font(fontName, fontStyle.getMapping(), fontSize);
         } else {
-            return new Font("Arial", fontStyle.getMapping(), fontSize);
+            return new Font("WenQuanYi Zen Hei", fontStyle.getMapping(), fontSize);
         }
     }
 
@@ -206,7 +220,7 @@ public class ResourceProvider implements InitializingBean {
     }
 
     public Font getChineseFont() {
-        return getFont("楷体", 25, FontStyle.PLAIN);
+        return getFont("WenQuanYi Zen Hei", 25, FontStyle.PLAIN);
     }
 
     private String getRandomBase64Image(Map<String, String> container, CaptchaResource captchaResource) {

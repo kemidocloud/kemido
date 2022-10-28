@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.jackson2.SecurityJackson2Modules;
+import com.kemido.oauth2.data.jpa.jackson2.OAuth2TokenJackson2Module;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.config.ClientSettings;
@@ -45,6 +46,7 @@ public class JpaRegisteredClientRepository implements RegisteredClientRepository
         this.objectMapper.registerModules(securityModules);
         this.objectMapper.registerModule(new OAuth2AuthorizationServerJackson2Module());
         this.objectMapper.registerModules(new KemidoJackson2Module());
+        this.objectMapper.registerModules(new OAuth2TokenJackson2Module());
     }
 
     @Override

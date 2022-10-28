@@ -3,6 +3,7 @@ package com.kemido.oauth2.data.jpa.storage;
 import com.kemido.assistant.core.constants.SymbolConstants;
 import com.kemido.oauth2.core.jackson2.KemidoJackson2Module;
 import com.kemido.oauth2.data.jpa.entity.KemidoAuthorization;
+import com.kemido.oauth2.data.jpa.jackson2.OAuth2TokenJackson2Module;
 import com.kemido.oauth2.data.jpa.service.KemidoAuthorizationService;
 import com.kemido.oauth2.data.jpa.utils.OAuth2AuthorizationUtils;
 import cn.hutool.core.date.DateUtil;
@@ -55,6 +56,7 @@ public class JpaOAuth2AuthorizationService implements OAuth2AuthorizationService
         this.objectMapper.registerModules(securityModules);
         this.objectMapper.registerModule(new OAuth2AuthorizationServerJackson2Module());
         this.objectMapper.registerModules(new KemidoJackson2Module());
+        this.objectMapper.registerModules(new OAuth2TokenJackson2Module());
     }
 
     @Override

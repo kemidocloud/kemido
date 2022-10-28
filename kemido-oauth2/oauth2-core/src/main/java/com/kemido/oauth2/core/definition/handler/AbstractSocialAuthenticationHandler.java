@@ -1,10 +1,11 @@
-package com.kemido.oauth2.authorization.definition;
+package com.kemido.oauth2.core.definition.handler;
 
 import com.kemido.access.core.exception.AccessIdentityVerificationFailedException;
 import com.kemido.assistant.core.domain.AccessPrincipal;
-import com.kemido.oauth2.authorization.exception.SocialCredentialsUserBindingFailedException;
+import com.kemido.oauth2.core.exception.SocialCredentialsUserBindingFailedException;
 import com.kemido.oauth2.core.definition.domain.KemidoUser;
 import com.kemido.oauth2.core.definition.domain.SocialUserDetails;
+import com.kemido.oauth2.core.definition.handler.SocialAuthenticationHandler;
 import com.kemido.oauth2.core.exception.UsernameAlreadyExistsException;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.security.core.AuthenticationException;
