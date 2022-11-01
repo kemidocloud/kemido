@@ -6,11 +6,12 @@ import com.kemido.captcha.core.exception.CaptchaIsEmptyException;
 import com.kemido.captcha.core.exception.CaptchaMismatchException;
 import com.kemido.captcha.core.exception.CaptchaParameterIllegalException;
 import com.kemido.captcha.core.processor.CaptchaRendererFactory;
-import com.kemido.oauth2.authorization.exception.OAuth2CaptchaArgumentIllegalException;
-import com.kemido.oauth2.authorization.exception.OAuth2CaptchaHasExpiredException;
-import com.kemido.oauth2.authorization.exception.OAuth2CaptchaIsEmptyException;
-import com.kemido.oauth2.authorization.exception.OAuth2CaptchaMismatchException;
 import com.kemido.oauth2.core.definition.domain.FormLoginWebAuthenticationDetails;
+import com.kemido.oauth2.core.exception.OAuth2CaptchaArgumentIllegalException;
+import com.kemido.oauth2.core.exception.OAuth2CaptchaHasExpiredException;
+import com.kemido.oauth2.core.exception.OAuth2CaptchaIsEmptyException;
+import com.kemido.oauth2.core.exception.OAuth2CaptchaMismatchException;
+
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
