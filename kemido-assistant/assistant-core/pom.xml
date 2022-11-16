@@ -94,6 +94,15 @@
         </dependency>
 
         <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-logback-1.x</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-trace</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>cn.zhxu</groupId>
             <artifactId>okhttps-jackson</artifactId>
             <exclusions>
