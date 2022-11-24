@@ -26,7 +26,7 @@ import javax.annotation.PostConstruct;
  * <p>Description: Redis 配置 </p>
  */
 @Configuration(proxyBeanMethods = false)
-@Import(RedisSessionConfiguration.class)
+@Import(RedisSessionSharingConfiguration.class)
 public class RedisConfiguration {
 
     private static final Logger log = LoggerFactory.getLogger(RedisConfiguration.class);

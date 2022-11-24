@@ -1,9 +1,9 @@
 package com.kemido.oauth2.data.jpa.storage;
 
 import com.kemido.oauth2.core.jackson2.KemidoJackson2Module;
+import com.kemido.oauth2.data.jpa.entity.KemidoRegisteredClient;
 import com.kemido.oauth2.data.jpa.service.KemidoRegisteredClientService;
 import com.kemido.oauth2.data.jpa.utils.OAuth2AuthorizationUtils;
-import com.kemido.oauth2.data.jpa.entity.KemidoRegisteredClient;
 import cn.hutool.core.date.DateUtil;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.Module;
@@ -16,8 +16,8 @@ import org.springframework.security.jackson2.SecurityJackson2Modules;
 import com.kemido.oauth2.data.jpa.jackson2.OAuth2TokenJackson2Module;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
-import org.springframework.security.oauth2.server.authorization.config.ClientSettings;
-import org.springframework.security.oauth2.server.authorization.config.TokenSettings;
+import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
+import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
 import org.springframework.security.oauth2.server.authorization.jackson2.OAuth2AuthorizationServerJackson2Module;
 import org.springframework.util.StringUtils;
 

@@ -1,4 +1,4 @@
-package com.kemido.oauth2.authorization.exception;
+package com.kemido.oauth2.core.exception;
 
 import org.springframework.security.core.AuthenticationException;
 
