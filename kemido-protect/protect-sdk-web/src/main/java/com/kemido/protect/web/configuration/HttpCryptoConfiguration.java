@@ -33,7 +33,7 @@ public class HttpCryptoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Protect Http Crypto] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Protect Http Crypto] Auto Configure.");
     }
 
     @Bean

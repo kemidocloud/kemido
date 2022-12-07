@@ -25,7 +25,7 @@ public class UpyunSmsConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Sms Upyun] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Sms Upyun] Auto Configure.");
     }
 
     /**

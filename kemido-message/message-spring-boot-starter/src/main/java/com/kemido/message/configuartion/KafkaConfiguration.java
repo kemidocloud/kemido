@@ -29,7 +29,7 @@ public class KafkaConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Message Kafka] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Message Kafka] Auto Configure.");
     }
 
     @Bean

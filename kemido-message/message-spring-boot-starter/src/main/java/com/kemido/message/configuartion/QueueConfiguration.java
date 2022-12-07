@@ -21,7 +21,7 @@ public class QueueConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Message Queue] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Message Queue] Auto Configure.");
     }
 
 }

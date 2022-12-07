@@ -33,7 +33,7 @@ public class FacilityLogAutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Facility Log] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Facility Log] Auto Configure.");
     }
 
 

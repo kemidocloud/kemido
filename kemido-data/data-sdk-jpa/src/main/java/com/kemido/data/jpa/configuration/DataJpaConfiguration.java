@@ -20,6 +20,6 @@ public class DataJpaConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- Module [Engine Data JPA] Auto Configure.");
+        log.debug("[Kemido] |- Module [Data JPA] Auto Configure.");
     }
 }

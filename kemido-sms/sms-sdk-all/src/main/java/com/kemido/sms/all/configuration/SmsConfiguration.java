@@ -48,7 +48,7 @@ public class SmsConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Sms All] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Sms All] Auto Configure.");
     }
 
     @Bean

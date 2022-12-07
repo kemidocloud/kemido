@@ -43,7 +43,7 @@ public class OkHttpAutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Web OkHttp] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Web OkHttp] Auto Configure.");
     }
 
     @Bean

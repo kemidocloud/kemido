@@ -40,7 +40,7 @@ public class RedissonConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Cache Redisson] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Cache Redisson] Auto Configure.");
     }
 
     private File readConfigFile() {

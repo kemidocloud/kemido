@@ -24,7 +24,7 @@ public class ChinaMobileSmsConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Sms China Mobile] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Sms China Mobile] Auto Configure.");
     }
 
     /**

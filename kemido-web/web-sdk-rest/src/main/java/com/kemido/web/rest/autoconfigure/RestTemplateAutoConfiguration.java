@@ -26,7 +26,7 @@ public class RestTemplateAutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Web Rest Template] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Web Rest Template] Auto Configure.");
     }
 
 

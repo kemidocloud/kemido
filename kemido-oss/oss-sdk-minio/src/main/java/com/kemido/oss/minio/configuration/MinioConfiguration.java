@@ -26,7 +26,7 @@ public class MinioConfiguration {
 
     @PostConstruct
     public void init() {
-        log.debug("[Kemido] |- SDK [Engine Oss Minio] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Oss Minio] Auto Configure.");
     }
 
     @Bean
@@ -54,7 +54,7 @@ public class MinioConfiguration {
     static class MinioLogicConfiguration {
         @PostConstruct
         public void init() {
-            log.debug("[Kemido] |- SDK [Engine Oss Minio Logic] Auto Configure.");
+            log.debug("[Kemido] |- SDK [Oss Minio Logic] Auto Configure.");
         }
     }
 }

@@ -26,7 +26,7 @@ public class CryptoStrategyConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Protect Crypto Strategy] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Protect Crypto Strategy] Auto Configure.");
     }
 
     @Configuration(proxyBeanMethods = false)

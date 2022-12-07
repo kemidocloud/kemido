@@ -24,7 +24,7 @@ public class YunpianSmsConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Sms Yunpian] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Sms Yunpian] Auto Configure.");
     }
 
     /**

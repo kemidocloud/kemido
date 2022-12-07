@@ -26,7 +26,7 @@ public class WxpayConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Pay Wxpay] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Pay Wxpay] Auto Configure.");
     }
 
     @Bean

@@ -30,7 +30,7 @@ public class WebRestAutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Web Rest] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Web Rest] Auto Configure.");
     }
 
     @Bean

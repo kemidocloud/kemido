@@ -24,7 +24,7 @@ public class AliyunSmsConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Sms Aliyun] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Sms Aliyun] Auto Configure.");
     }
 
     /**

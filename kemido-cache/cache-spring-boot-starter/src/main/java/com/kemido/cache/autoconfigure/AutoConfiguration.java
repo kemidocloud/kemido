@@ -16,6 +16,6 @@ public class AutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.info("[Kemido] |- Starter [Engine Cache Starter] Auto Configure.");
+        log.info("[Kemido] |- Starter [Cache Starter] Auto Configure.");
     }
 }

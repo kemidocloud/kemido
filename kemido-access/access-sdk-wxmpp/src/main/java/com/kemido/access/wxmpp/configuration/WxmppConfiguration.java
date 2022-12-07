@@ -26,7 +26,7 @@ public class WxmppConfiguration {
 
     @PostConstruct
     public void init() {
-        log.debug("[Kemido] |- SDK [Engine Access Wxmpp] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Access Wxmpp] Auto Configure.");
     }
 
     @Bean

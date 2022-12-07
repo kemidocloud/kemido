@@ -22,7 +22,7 @@ public class BehaviorCaptchaConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Captcha Behavior] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Captcha Behavior] Auto Configure.");
     }
 
     @Bean(CaptchaCategory.JIGSAW_CAPTCHA)

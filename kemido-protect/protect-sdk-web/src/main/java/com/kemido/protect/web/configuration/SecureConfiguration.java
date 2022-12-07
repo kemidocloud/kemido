@@ -27,7 +27,7 @@ public class SecureConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Protect Secure] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Protect Secure] Auto Configure.");
     }
 
     @Bean

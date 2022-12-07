@@ -27,7 +27,7 @@ public class ScanConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Web Scan] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Web Scan] Auto Configure.");
     }
 
     @Bean

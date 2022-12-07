@@ -38,7 +38,7 @@ public class MultiTenancyConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Data Multi Tenancy] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Data Multi Tenancy] Auto Configure.");
     }
 
     @Bean

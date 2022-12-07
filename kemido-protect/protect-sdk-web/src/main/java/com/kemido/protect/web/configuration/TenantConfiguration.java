@@ -19,7 +19,7 @@ public class TenantConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Protect Tenant] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Protect Tenant] Auto Configure.");
     }
 
     @Bean

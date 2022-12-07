@@ -43,7 +43,7 @@ public class OAuth2ComplianceConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine OAuth2 Compliance] Auto Configure.");
+        log.debug("[Kemido] |- SDK [OAuth2 Compliance] Auto Configure.");
     }
 
     @Bean

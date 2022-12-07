@@ -30,7 +30,7 @@ public class MybatisPlusConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Data Mybatis Plus] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Data Mybatis Plus] Auto Configure.");
     }
 
     private DbType parseDbType() {

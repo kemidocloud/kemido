@@ -24,7 +24,7 @@ public class HutoolCaptchaConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Captcha Hutool] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Captcha Hutool] Auto Configure.");
     }
 
     @Bean(CaptchaCategory.HUTOOL_LINE_CAPTCHA)

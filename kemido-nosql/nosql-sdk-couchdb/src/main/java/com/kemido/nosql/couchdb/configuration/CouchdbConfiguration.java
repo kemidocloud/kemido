@@ -24,6 +24,6 @@ public class CouchdbConfiguration {
 
     @PostConstruct
     public void init() {
-        log.info("[Kemido] |- SDK [Engine Nosql CouchDB] Auto Configure.");
+        log.info("[Kemido] |- SDK [Nosql CouchDB] Auto Configure.");
     }
 }

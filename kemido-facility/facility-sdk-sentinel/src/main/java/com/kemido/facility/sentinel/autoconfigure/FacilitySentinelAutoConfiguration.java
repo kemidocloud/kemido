@@ -37,7 +37,7 @@ public class FacilitySentinelAutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Facility Sentinel] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Facility Sentinel] Auto Configure.");
     }
 
     @Bean

@@ -23,7 +23,7 @@ public class AutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.info("[Kemido] |- Starter [Engine Captcha Starter] Auto Configure.");
+        log.info("[Kemido] |- Starter [Captcha Starter] Auto Configure.");
     }
 
     @Bean

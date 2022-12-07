@@ -24,7 +24,7 @@ public class TencentSmsConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Sms Tencent] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Sms Tencent] Auto Configure.");
     }
 
     /**

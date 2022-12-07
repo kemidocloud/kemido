@@ -30,7 +30,7 @@ public class JustAuthConfiguration {
 
     @PostConstruct
     public void init() {
-        log.debug("[Kemido] |- SDK [Engine Access Just Auth] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Access Just Auth] Auto Configure.");
     }
 
     @Bean

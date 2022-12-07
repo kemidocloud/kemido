@@ -40,7 +40,7 @@ public class AccessAllConfiguration {
 
     @PostConstruct
     public void init() {
-        log.debug("[Kemido] |- SDK [Engine Access All] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Access All] Auto Configure.");
     }
 
     @Configuration(proxyBeanMethods = false)
@@ -70,7 +70,7 @@ public class AccessAllConfiguration {
 
         @PostConstruct
         public void init() {
-            log.debug("[Kemido] |- SDK [Engine Access All Controller] Auto Configure.");
+            log.debug("[Kemido] |- SDK [Access All Controller] Auto Configure.");
         }
 
         @Bean

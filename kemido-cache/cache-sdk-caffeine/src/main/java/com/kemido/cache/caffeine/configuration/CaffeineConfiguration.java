@@ -26,7 +26,7 @@ public class CaffeineConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Cache Caffeine] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Cache Caffeine] Auto Configure.");
     }
 
     @Bean

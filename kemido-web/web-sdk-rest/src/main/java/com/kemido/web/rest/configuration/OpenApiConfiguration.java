@@ -49,7 +49,7 @@ public class OpenApiConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Web Rest Swagger] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Web Rest Swagger] Auto Configure.");
     }
 
     @Bean

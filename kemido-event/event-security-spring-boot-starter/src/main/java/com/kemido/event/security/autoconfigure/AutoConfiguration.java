@@ -20,6 +20,6 @@ public class AutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.info("[Kemido] |- Starter [Engine Event Security Starter] Auto Configure.");
+        log.info("[Kemido] |- Starter [Event Security Starter] Auto Configure.");
     }
 }

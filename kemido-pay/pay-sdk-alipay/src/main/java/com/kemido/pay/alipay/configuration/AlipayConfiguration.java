@@ -31,7 +31,7 @@ public class AlipayConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Pay Alipay] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Pay Alipay] Auto Configure.");
     }
 
     @Bean

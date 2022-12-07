@@ -21,7 +21,7 @@ public class GraphicCaptchaConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Captcha Graphic] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Captcha Graphic] Auto Configure.");
     }
 
     @Bean(CaptchaCategory.ARITHMETIC_CAPTCHA)

@@ -24,7 +24,7 @@ public class JdSmsConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Sms Jd] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Sms Jd] Auto Configure.");
     }
 
     /**

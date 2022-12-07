@@ -36,7 +36,7 @@ public class JetCacheConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Cache JetCache] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Cache JetCache] Auto Configure.");
     }
 
     @Bean

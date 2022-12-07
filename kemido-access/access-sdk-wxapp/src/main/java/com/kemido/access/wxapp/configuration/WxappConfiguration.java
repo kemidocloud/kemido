@@ -28,7 +28,7 @@ public class WxappConfiguration {
 
     @PostConstruct
     public void init() {
-        log.debug("[Kemido] |- SDK [Engine Access Wxapp] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Access Wxapp] Auto Configure.");
     }
 
     @Bean

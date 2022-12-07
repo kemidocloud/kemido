@@ -25,6 +25,6 @@ public class AutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.info("[Kemido] |- Starter [Engine Protect Web Starter] Auto Configure.");
+        log.info("[Kemido] |- Starter [Protect Web Starter] Auto Configure.");
     }
 }

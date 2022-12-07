@@ -34,7 +34,7 @@ public class HttpClientAutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Web HttpClient] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Web HttpClient] Auto Configure.");
     }
 
     private final Timer connectionManagerTimer = new Timer(

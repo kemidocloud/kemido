@@ -23,6 +23,6 @@ public class AutoConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.info("[Kemido] |- Starter [Engine Rest Starter] Auto Configure.");
+        log.info("[Kemido] |- Starter [Rest Starter] Auto Configure.");
     }
 }

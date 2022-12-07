@@ -20,6 +20,6 @@ public class PayConfiguration {
 
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Pay All] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Pay All] Auto Configure.");
     }
 }

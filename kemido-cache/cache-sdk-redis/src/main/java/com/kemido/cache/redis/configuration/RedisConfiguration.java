@@ -4,7 +4,6 @@ import com.kemido.cache.core.properties.CacheProperties;
 import com.kemido.cache.redis.enhance.KemidoRedisCacheManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,12 +30,9 @@ public class RedisConfiguration {
 
     private static final Logger log = LoggerFactory.getLogger(RedisConfiguration.class);
 
-    @Autowired
-    private CacheProperties cacheProperties;
-
     @PostConstruct
     public void postConstruct() {
-        log.debug("[Kemido] |- SDK [Engine Cache Redis] Auto Configure.");
+        log.debug("[Kemido] |- SDK [Cache Redis] Auto Configure.");
     }
 
     private RedisSerializer<String> keySerializer() {
@@ -88,7 +84,7 @@ public class RedisConfiguration {
     }
 
     @Bean
-    public RedisCacheManager redisCacheManager(RedisConnectionFactory redisConnectionFactory) {
+    public RedisCacheManager redisCacheManager(RedisConnectionFactory redisConnectionFactory, CacheProperties cacheProperties) {
         RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(redisConnectionFactory);
 
         // 注意：这里 RedisCacheConfiguration 每一个方法调用之后，都会返回一个新的 RedisCacheConfiguration 对象，所以要注意对象的引用关系。
