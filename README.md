@@ -1,6 +1,9 @@
 # Kemido
 Spring Framework based library.
 
+# Notes
+此项目为自用项目，Fork 于 Dante Cloud，如要使用请前往 https://www.herodotus.cn 下载使用原版。
+
 ## Sub projects
 ```txt
 kemido
